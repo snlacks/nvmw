@@ -139,7 +139,6 @@ if %NODE_TYPE% == iojs (
       set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/node.exe
     )
   ) else (
-    echo HELLO %NODE_VERSION%
     if not "%NODE_VERSION:~1,1%" == "0" (
       set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x64/node.exe
     ) else (
