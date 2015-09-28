@@ -133,14 +133,14 @@ if %NODE_TYPE% == iojs (
 ) else (
   if %ARCH% == x32 (
 
-    if not %NODE_VERSION:~0,1% == 0 (
+    if not "%NODE_VERSION:~1,1%" == "0" (
       set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x86/node.exe
     ) else (
       set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/node.exe
     )
   ) else (
-
-    if not %NODE_VERSION:~0,1% == 0 (
+    echo HELLO %NODE_VERSION%
+    if not "%NODE_VERSION:~1,1%" == "0" (
       set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/win-x64/node.exe
     ) else (
       set NODE_EXE_URL=%NVMW_NODEJS_ORG_MIRROR%/%NODE_VERSION%/x64/node.exe
